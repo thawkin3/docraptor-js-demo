@@ -1,0 +1,39 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>DocRaptor JS Demo</title>
+  <meta name="description" content="DocRaptor JS Demo">
+  <meta name="author" content="SitePoint">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      text-align: center;
+    }
+
+    #paragraphContainer {
+      padding: 16px;
+      border: solid 2px red;
+      border-radius: 8px;
+      margin: auto;
+      max-width: 320px;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <h1>DocRaptor JS Demo</h1>
+    <div id="paragraphContainer">
+      <p>This content is written in the HTML source code.</p>
+    </div>
+  </main>
+  <script>
+    var jsParagraph = document.createElement('p');
+    var paragraphText = document.createTextNode('And this content is inserted by JavaScript!');
+    jsParagraph.appendChild(paragraphText);
+    document.getElementById('paragraphContainer').appendChild(jsParagraph);
+  </script>
+</body>
+</html>
